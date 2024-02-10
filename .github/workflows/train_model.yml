@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'src/model/train.py'
+      - 'train.py'
 
 jobs:
   train_model:
