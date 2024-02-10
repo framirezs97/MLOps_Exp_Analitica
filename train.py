@@ -10,6 +10,7 @@ import numpy as np
 from sklearn.cluster import KMeans
 from sklearn import datasets
 
+
 # Import the model class from the main file
 from src.Classifier import Classifier
 
