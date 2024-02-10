@@ -70,7 +70,7 @@ def get_hardest_k_examples(model, testing_set, k=32):
 
 def train_and_log(config, experiment_id='99'):
     with wandb.init(
-        project="MLOps-FRS2024",
+        project="MLOps-EXP_ANALITICA_CLUSTERING",
         name=f"Train Model ExecId-{args.IdExecution} ExperimentId-{experiment_id}",
         job_type="train-model", config=config) as run:
         
@@ -127,7 +127,7 @@ def train_and_log(config, experiment_id='99'):
 
 
 def evaluate_and_log(experiment_id='99', config=None):
-    with wandb.init(project="MLOps-FRS2024", name=f"Eval Model ExecId-{args.IdExecution} ExperimentId-{experiment_id}", job_type="eval-model", config=config) as run:
+    with wandb.init(project="MLOps-EXP_ANALITICA_CLUSTERING", name=f"Eval Model ExecId-{args.IdExecution} ExperimentId-{experiment_id}", job_type="eval-model", config=config) as run:
         data = run.use_artifact('mnist-preprocess:latest')
         data_dir = data.download()
         testing_set = read(data_dir, "test")
